@@ -1,0 +1,52 @@
+.NavBar {
+  background-color: blueviolet;
+  grid-column: mobile-start/mobile-end;
+  padding: 1.5rem 3rem;
+
+  @media only screen and (min-width: 768px) {
+    grid-row: 1 / span 1;
+    grid-column: full-start/full-end;
+  }
+}
+
+.MenuBtn {
+  display: flex;
+  flex-direction: column;
+  right: 5rem;
+  top: 2rem;
+  cursor: pointer;
+  background: transparent;
+  z-index: 201;
+
+  /* lines */
+  .MenuBtn_line {
+    width: 2rem;
+    height: 0.25rem;
+    margin: 0 0 0.35rem 0;
+    background: white;
+    transition: transform 0.3s ease-in;
+  }
+
+  &.close {
+    /* // rotate btn lines into X */
+    transform: rotate(180deg);
+    /* // animation: rotate180 1s ease-in-out; */
+    .menuBtn-line {
+      background: white;
+      /* // rotate line 1 */
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(0.6rem, 1rem);
+        /* // animation: rotate45 0.5s ease-in; */
+      }
+      /* // hide line 2 */
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      /* // rotate line 3 */
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(0.5rem, -1rem);
+        /* // animation: rotateMinus45 0.5s ease-in; */
+      }
+    }
+  }
+}

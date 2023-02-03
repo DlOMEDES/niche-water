@@ -1,0 +1,9 @@
+.AdSection {
+  background-color: green;
+  grid-column: mobile-center-start/mobile-center-end;
+
+  @media only screen and (min-width: 768px) {
+    grid-row: 10 / span 1;
+    grid-column: 9 / center-end;
+  }
+}

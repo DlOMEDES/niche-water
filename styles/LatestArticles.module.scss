@@ -1,0 +1,9 @@
+.LatestArticles {
+  background-color: black;
+  grid-column: mobile-center-start/mobile-center-end;
+
+  @media only screen and (min-width: 768px) {
+    grid-row: 5 / span 1;
+    grid-column: center-start/center-end;
+  }
+}

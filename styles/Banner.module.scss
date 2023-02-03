@@ -1,0 +1,9 @@
+.Banner {
+  background: orange;
+  grid-column: mobile-center-start/mobile-center-end;
+
+  @media only screen and (min-width: 768px) {
+    grid-row: 2 / span 1;
+    grid-column: full-start/full-end;
+  }
+}

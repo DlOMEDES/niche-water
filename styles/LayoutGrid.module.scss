@@ -1,0 +1,23 @@
+.LayoutGrid {
+  background-color: #f8fbf0;
+  height: 99vh;
+  display: grid;
+  grid-template-columns: [mobile-start] 3rem [mobile-center-start] minmax(
+      min-content,
+      1fr
+    ) [mobile-center-end] 3rem [mobile-end];
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: 7rem 50vw repeat(3, min-content) 30vw repeat(
+        4,
+        min-content
+      );
+    grid-template-columns:
+      [full-start] 1fr [center-start] repeat(
+        10,
+        [col-start]minmax(min-content, 16rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+  }
+}

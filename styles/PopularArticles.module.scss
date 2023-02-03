@@ -1,0 +1,9 @@
+.PopularArticles {
+  background-color: cadetblue;
+  grid-column: mobile-center-start/mobile-center-end;
+
+  @media only screen and (min-width: 768px) {
+    grid-row: 4 / span 1;
+    grid-column: center-start/center-end;
+  }
+}
